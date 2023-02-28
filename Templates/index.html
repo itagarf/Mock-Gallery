@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename = 'style.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/a11y-slider@latest/dist/a11y-slider.css" />
+    <script src="https://unpkg.com/a11y-slider@latest/dist/a11y-slider.js" defer></script>
+</head>
+<body>
+    
+  <header>
+    <div class="menu">
+        <nav>
+            <h2>Favour<span style="color: rgb(115, 136, 149); font-size: 30px;">Rite</span></h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Gallery</a></li>                
+                <li><a href="#">About</a></li>                
+                <li><a href="#">Contact</a></li>                
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<section class="carousel | padding-block-900 text-center">
+    <ul class="slider">
+        <li>
+            <img src="{{ url_for ('static', filename = 'imgs/proboscis1.jpg') }}" alt="">
+        </li>
+        <li>
+            <img src="{{ url_for ('static', filename = 'imgs/tiger1.jpg') }}" alt="">
+        </li>
+        <li>
+            <img src="{{ url_for('static', filename = 'imgs/proboscis2.jpg') }}" alt="">
+        </li>
+        <li>
+            <img src="{{ url_for('static', filename = 'imgs/tiger2.jpg') }}" alt="">
+        </li>
+      </ul>
+</section>
+
+
+<div  class="newsletter-box">
+    <p>Sign up to our monthly newsletter</p><br>
+    <input type="text" class="newsletter"><br>
+    <button type="button">Sign up</button>
+</div>
+
+
+
+<script src="https://unpkg.com/a11y-slider@latest/dist/a11y-slider.js"></script>
+<script src="{{ url_for ('static', filename = 'script.js') }}"></script>
+</body>
+</html>
