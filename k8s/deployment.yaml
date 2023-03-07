@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mock-gallery
+  labels:
+    app: mock-gallery
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: mock-gallery
+  template:
+    metadata:
+      labels:
+        app: mock-gallery
+    spec:
+      terminationGracePeriodSeconds: 30
+      containers:
+      - name: mock-gallery
+        image: __DOCKER_REPOSITORY__/__IMAGE_NAME__:__IMAGE_TAG__
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "300m"
+
