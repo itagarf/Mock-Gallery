@@ -11,7 +11,6 @@ jobs:
     env:
       DOCKER_REPOSITORY: ${{ secrets.DOCKER_HUB_USERNAME }}
       IMAGE_TAG: ${{ github.run_number }}
-      BUILD_TOKEN: ${{ secrets.BUILD_TOKEN }}
     steps:
       -
         name: Checkout
