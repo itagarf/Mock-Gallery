@@ -31,13 +31,3 @@ jobs:
         run:
           docker push $DOCKER_REPOSITORY/$IMAGE_NAME:$GITHUB_RUN_NUMBER
 
-      -
-        uses: cschleiden/replace-tokens@v1
-        with:
-          files: '["k8s/*.yaml"]'
-          tokenPrefix: __
-          tokenSuffix: __
-        env:
-          DOCKER_REPOSITORY: ${{ env.DOCKER_REPOSITORY }}
-          IMAGE_NAME: ${{ env.IMAGE_NAME }}
-          IMAGE_TAG: ${{ env.IMAGE_TAG }}
